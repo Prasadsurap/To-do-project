@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(https://pixlr.com/images/index/ai-image-generator-one.webp) top center repeat-y; 
+     background-repeat:no-repeat;
+     width: 100%;
+   
+
+}
+.app
+{
+    font-family:sans-serif;
+    width: min(95vw,500px);
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 1.875em;
+
+}
+.container{
+    padding: 2em 2.5em;
+    background-color: white;
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.3);
+    border-radius: 0.8em;
+   opacity: 90%;
+
+}
+#wrapper{
+    position: relative;
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    gap: 1em;
+}
+.input{
+    width: 85%;
+    color: black;
+    font-size: 0.9em;
+    border: none;
+    border-bottom: 2px solid rgb(15, 17, 17);
+    padding: 1em 0.5em;
+    background-color: transparent;
+}
+#wrapper input:focus{
+    outline: none;
+    border-color: rgb(20, 158, 117);
+}
+
+#add-btn{
+    position: relative;
+    border-radius: 0.3em;
+    font-weight: 5000;
+    font-size: 1.5em;
+    background-color: rgb(16, 26, 23);
+    outline: none;
+    border: black;
+    color: white;
+    cursor: pointer;
+
+}
+
+
+#tasks{
+    margin-top: 1em;
+    border-radius: 0.5em;
+    width: 100%;
+    position: relative;
+    padding: 1em 0.5em;
+    border-radius: 0.5em;
+    box-shadow: 1em black;
+}
+.task{
+    background-color: rgb(218, 169, 169);
+    padding: 0.8em 1em;
+    display: grid;
+    grid-template-columns: 1fr 8fr 2fr 2fr ;
+    gap: 0.5em;
+    border-radius: 1em;
+    box-shadow: 0 0.5em 1em (0,0,0,0.05);
+    text-align: center;
+    cursor: pointer;
+}
+.task:not(:first-child){
+    margin-top: 1em;
+
+}
+.task input[type="checkbox"]{
+    position: relative;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid rgb(44, 40, 40);
+}
+.task input[type="checkbox"]:before{
+    content: "";
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+
+}
+.task input[type="checkbox"]:checked{
+    background-color: burlywood;
+    border-color:burlywood ;
+}
+.task input[type="checkbox"]:checked:before{
+    position: absolute;
+    content: "\f00c";
+    color: white;
+    font-size: 0.8em;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+.task span{
+    font:0.9em;
+    font-weight: 400;
+    word-break: break-all;
+}
+.task button{
+    color: aliceblue;
+    width: 100%;
+    padding: 1em 0;
+    border-radius: 0.5em;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.edit{
+    background-color: rgb(192, 192, 151);
+
+}
+.delete{
+    background-color: red;
+}
+.compleated{
+    text-decoration: line-through;
+    color: rgb(236, 156, 9);
+    
+}
+#pending-tasks span{
+    color:#0fe3d8 ;
+}
+#error{
+    text-align: center;
+    background-color:white;
+    color: red;
+     margin-top: 1.5em;
+    padding: 1em 0;
+    border-radius: 0.8em;
+    display: none;
+    cursor: pointer;
+}
