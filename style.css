@@ -4,10 +4,13 @@
     box-sizing: border-box;
 }
 body{
-    background: url(https://pixlr.com/images/index/ai-image-generator-one.webp) top center repeat-y; 
+    background:linear-gradient(red 30%, green 30%, blue 50%,);
+    background: url(https://pixlr.com/images/index/ai-image-generator-one.webp) top center repeat-y ; 
      background-repeat:no-repeat;
-     width: 100%;
-   
+     background-size: cover;
+     background-position: center;
+    background-color: grey;
+       
 
 }
 .app
